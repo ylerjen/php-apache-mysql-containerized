@@ -1,5 +1,25 @@
-Containerize This: PHP/Apache/MySQL
-===================================
+# PHP/Apache/MySQL for Laravel 5.8+
+
+This fork is an apache2 server w/ php and a mysql database provided by docker.
+
+The configuration was changed to be able to run a laravel 5.8+ application :
+- Rewrite module was enabled on apache
+- PHP was upgraded to 7.2
+
+## Launch the containers
+
+Docker is a prerequisite (Thanks Captain Obvious).
+
+From the project root folder, run :
+1. ```docker-compose build``` : to build the images
+1. ```docker-compose up``` : to launch the containers
+
+## Need another php version ?
+
+Thanks to [mzazon](https://github.com/mzazon) the original repo author, this is as easy as changing the `PHP_VERSION` value in the `./.env` file and then run again the `build` and the `up`.
+
+
+# Initial readme from the forked repo
 
 ### Intro
 Continuing with the Containerize This! series, we're looking at common web application technologies and how they can be used within Docker containers effectively. PHP/Apache/MySQL have a very large market share on content management systems and web applications on the internet, and with so many developers using these technologies, there is a lot of interest to modernize the way that they use them from from local development all the way to production. Today we'll take a look at several ways to containerize and link PHP, Apache, and MySQL together while demonstrating some tips, tricks, and best-practices that will help you take a modern approach when developing and deploying your PHP applications!
